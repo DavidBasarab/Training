@@ -23,7 +23,7 @@ namespace MovieService
                                   Title = "Spaceballs",
                                   Director = "Mel Gibson",
                                   Cast = new List<Actor> {new Actor() {FirstName = "John", LastName = "Candy"},
-                                  new Actor() {FirstName = "Mel", LastName = "Gibson"},
+                                  new Actor() {FirstName = "Mel", LastName = "Brooks"},
                                   new Actor() {FirstName = "Bill", LastName = "Pullman"},
                                   new Actor() {FirstName = "Rick", LastName = "Moranis"}}
                               };
