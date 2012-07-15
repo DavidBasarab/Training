@@ -1,4 +1,0 @@
-Training
-========
-
-Training on git

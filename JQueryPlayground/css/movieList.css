@@ -1,0 +1,3 @@
+﻿#movieList h2 { font-family: Arial;font-size: 14pt;font-weight: bold;border-bottom: 1px solid #000;}
+.castList h3 { font-family: Arial;font-size: 12pt;font-weight: bold;margin: 0;padding: 0;}
+.castList ol { list-style-type: none;margin: 0;padding: 0;border: 1px dashed #000; }
