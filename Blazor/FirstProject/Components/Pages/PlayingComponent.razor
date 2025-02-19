@@ -1,4 +1,6 @@
 @using FatCat.Toolkit.Console
+@rendermode InteractiveServer
+
 <h3>PlayingComponent</h3>
 
 @if (Items.Count != 0)
@@ -25,14 +27,8 @@ else
     [Parameter]
     public List<PlayingWithData> Items { get; set; } = [];
 
-    private void TextboxChanged(ChangeEventArgs args)
-    {
-        Console.WriteLine(args.Value);
-  }
+    private void TextboxChanged(ChangeEventArgs args) { Console.WriteLine(args.Value); }
 
-    private void OnInput(ChangeEventArgs obj)
-    {
-        ConsoleLog.Write(obj.Value.ToString());
-    }
+    private void OnInput(ChangeEventArgs obj) { ConsoleLog.Write(obj.Value.ToString()); }
 
 }
