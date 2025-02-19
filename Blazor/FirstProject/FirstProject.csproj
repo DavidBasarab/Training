@@ -2,8 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FatCat.Toolkit" Version="1.0.264" />
+  </ItemGroup>
 
 </Project>

@@ -5,17 +5,47 @@
 
 <h1>Counter</h1>
 
-<p role="status">Current count: @currentCount</p>
+<p role="status">Current count: @displayCount</p>
+
+@if (clickCount >= 5)
+{
+    <p>You clicked the button more than 5 times!!!! Total @(clickCount)</p>
+}
+
+<br/>
+
+@if (items.Count != 0)
+{
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>@item.FirstName</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No items to display</p>
+}
+
+<br/>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
 
+    private List<PlayingWithData> items = []; // Faker.Create<List<PlayingWithData>>(4);
+
     [Parameter]
     public int IncrementAmount { get; set; }
 
-    private int currentCount;
+    private int displayCount;
+    private int clickCount;
 
-    private void IncrementCount() { currentCount += IncrementAmount; }
+    private void IncrementCount()
+    {
+        clickCount++;
+        displayCount += IncrementAmount;
+    }
 
 }
