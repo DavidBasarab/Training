@@ -1,0 +1,22 @@
+<h3>PlayingComponent</h3>
+
+@if (Items.Count != 0)
+{
+    <ul>
+        @foreach (var item in Items)
+        {
+            <li>@item.FirstName</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No items to display</p>
+}
+
+@code {
+
+    [Parameter]
+    public List<PlayingWithData> Items { get; set; } = [];
+
+}
