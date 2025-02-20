@@ -1,0 +1,34 @@
+<HeadContent>
+    <style>
+        :root {
+            --board-bg: yellow;
+            --player1: red;
+            --player2: blue;
+        }
+    </style>
+</HeadContent>
+
+
+<div>
+    <span title="Click to play a piece" @onclick="() => gameState.PlayPiece(0)">🔽</span>
+    
+    <div class="board">
+        @for (int i = 0; i < 42; i++)
+        {
+            <span class="container">
+
+            </span>
+        }
+    </div>
+</div>
+
+@code {
+
+    private GameState gameState = new();
+    
+    void OnInitialized()
+    {
+        gameState.ResetGame();
+    }
+
+}
